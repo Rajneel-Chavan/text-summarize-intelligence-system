@@ -20,9 +20,9 @@ try:
     # local_files_only=True prevents the library from looking online
     model = T5ForConditionalGeneration.from_pretrained(MODEL_PATH, local_files_only=True)
     tokenizer = T5Tokenizer.from_pretrained(MODEL_PATH, local_files_only=True)
-    print("✅ Model loaded successfully!")
+    print("Model loaded successfully!")
 except Exception as e:
-    print(f"❌ Error loading model: {e}")
+    print(f"Error loading model: {e}")
     raise e # Stop the server if the model isn't there
 
 # 3. Device Selection
